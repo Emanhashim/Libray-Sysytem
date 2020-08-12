@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="874" pageHeight="792" columnWidth="834" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c8a39b02-d6c6-401e-bc0c-e02ea803a26b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     booklist.`ISBN` AS booklist_ISBN,
+     booklist.`title` AS booklist_title,
+     booklist.`Authour` AS booklist_Authour,
+     booklist.`Edition` AS booklist_Edition,
+     booklist.`Quanyity` AS booklist_Quanyity,
+     booklist.`accessionnumber` AS booklist_accessionnumber,
+     booklist.`shelfcode` AS booklist_shelfcode,
+     booklist.`ItemISBN` AS booklist_ItemISBN
+FROM
+     `booklist` booklist]]>
+	</queryString>
+	<field name="booklist_ISBN" class="java.lang.Integer"/>
+	<field name="booklist_title" class="java.lang.String"/>
+	<field name="booklist_Authour" class="java.lang.String"/>
+	<field name="booklist_Edition" class="java.lang.String"/>
+	<field name="booklist_Quanyity" class="java.lang.Integer"/>
+	<field name="booklist_accessionnumber" class="java.lang.Integer"/>
+	<field name="booklist_shelfcode" class="java.lang.Integer"/>
+	<field name="booklist_ItemISBN" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="264" y="23" width="245" height="43" forecolor="#000000" backcolor="#FFFFFF" uuid="01e1fc24-4d4d-479c-99b9-6e4ec62fbc1b"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="24" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Report Book List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="7" y="2" width="100" height="20" uuid="cb45c8c5-1ad8-4fd2-9556-b50b257f0b84"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[booklist_ISBN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="2" width="100" height="20" uuid="860f2cde-4e81-4dcb-84be-e9a353722f91"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[booklist_title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="2" width="111" height="20" uuid="991f0229-61f7-4c59-87da-deecc988a247"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[booklist_Authour]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="2" width="100" height="20" uuid="1cb8bb99-baf1-466f-babc-df4497011ec6"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[booklist_Edition]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="2" width="100" height="20" uuid="14d648e2-09db-4df0-a8d9-b8182496cfa4"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[booklist_Quanyity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="734" y="2" width="121" height="20" uuid="c96f6275-4550-423e-9481-64a850ea3430"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[booklist_shelfcode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="565" y="2" width="169" height="20" uuid="789efd2e-3d81-4e29-91db-473969a695ab"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[booklist_accessionnumber]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="25" width="100" height="20" uuid="c303710d-a664-450f-8687-67fb64ea78b0"/>
+				<textFieldExpression><![CDATA[$F{booklist_ISBN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="14" width="100" height="20" uuid="d5c0c1b8-7a91-4f9a-89ef-467f6b8011a2"/>
+				<textFieldExpression><![CDATA[$F{booklist_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="12" width="100" height="20" uuid="0928eb57-2af7-4cc6-bc75-88f02c24e338"/>
+				<textFieldExpression><![CDATA[$F{booklist_Authour}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="337" y="9" width="100" height="20" uuid="634f39e2-4e1f-498b-b4f3-e4732391aadd"/>
+				<textFieldExpression><![CDATA[$F{booklist_Edition}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="9" width="100" height="20" uuid="da7347ab-040f-4a4f-b830-b2de1ac00bff"/>
+				<textFieldExpression><![CDATA[$F{booklist_Quanyity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="734" y="12" width="100" height="20" uuid="0f79e9b7-82fe-4d17-9805-2c62622aa6bc"/>
+				<textFieldExpression><![CDATA[$F{booklist_shelfcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="565" y="12" width="100" height="20" uuid="3f74f7ba-18ac-4855-854d-7597f684b62e"/>
+				<textFieldExpression><![CDATA[$F{booklist_accessionnumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

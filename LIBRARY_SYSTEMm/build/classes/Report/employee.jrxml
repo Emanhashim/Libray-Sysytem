@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cd288752-2aa4-4057-a339-403608a741e0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     employee.`empid` AS employee_empid,
+     employee.`empname` AS employee_empname,
+     employee.`Phone` AS employee_Phone,
+     employee.`Salary` AS employee_Salary
+FROM
+     `employee` employee]]>
+	</queryString>
+	<field name="employee_empid" class="java.lang.String"/>
+	<field name="employee_empname" class="java.lang.String"/>
+	<field name="employee_Phone" class="java.lang.Integer"/>
+	<field name="employee_Salary" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="163" y="39" width="254" height="40" forecolor="#FFAFAF" backcolor="#00FFFF" uuid="6b3967cd-803e-4b8c-835f-dc00247ffb2d"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="-17" width="260" height="45" forecolor="#FF0000" uuid="ecf9ffc4-1591-49aa-97d0-dd2e1f0094cc"/>
+				<textElement>
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[DBU LIBRARY]]></text>
+			</staticText>
+			<image>
+				<reportElement x="423" y="-17" width="132" height="96" uuid="d3b9cb99-1d5c-4666-aa18-39388f5debf1"/>
+				<imageExpression><![CDATA["/home/cs/Desktop/kkkkkkkkkkkkkkkk/src/sis/images/splash.gif"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-1" y="-7" width="163" height="86" uuid="a510aa49-a7b1-4f66-9256-e465bf37863b"/>
+				<imageExpression><![CDATA["/home/cs/Desktop/kkkkkkkkkkkkkkkk/src/sis/images/splash.gif"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="162" y="63" width="230" height="1" uuid="48128a53-70ed-4121-94fd-1de6521cd10f"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="14" y="2" width="100" height="20" forecolor="#0000FF" uuid="44788de3-cef1-439c-9b2f-626e42240743"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[employee_empid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="2" width="100" height="20" forecolor="#0000FF" uuid="2058758f-cf22-481e-815a-f1e4a9deda82"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[employee_empname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="2" width="100" height="20" forecolor="#0000FF" uuid="96ae362d-9afd-4664-82fd-42174ea8712c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[employee_Phone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="2" width="114" height="20" forecolor="#0000FF" uuid="dd36821a-d54d-4a6c-b502-988228d25e3e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[employee_Salary]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="14" y="15" width="100" height="20" uuid="e1a6a3f7-182a-42cc-b570-c62cc8050a90"/>
+				<textFieldExpression><![CDATA[$F{employee_empid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="15" width="100" height="20" uuid="00df1c59-6ab3-4fb7-a844-3263c0b40a46"/>
+				<textFieldExpression><![CDATA[$F{employee_empname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="24" width="100" height="20" uuid="3de5af89-9a70-4c64-afec-6e638bad7161"/>
+				<textFieldExpression><![CDATA[$F{employee_Phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="24" width="100" height="20" uuid="4484d1fc-4b7b-436b-ab0f-ab4e235dade2"/>
+				<textFieldExpression><![CDATA[$F{employee_Salary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="147" y="5" width="100" height="20" uuid="128447b3-c253-48a1-8e04-831c07158f18"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="7" width="100" height="20" uuid="992d9216-c6a3-46aa-93fb-f8aeb650808a"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

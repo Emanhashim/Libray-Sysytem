@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1116" pageHeight="842" columnWidth="1076" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5c1d12a6-25bf-4ad5-a061-5df363cfffaf">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     viewloanstuden.`ISBN` AS viewloanstuden_ISBN,
+     viewloanstuden.`title` AS viewloanstuden_title,
+     viewloanstuden.`IdNumber` AS viewloanstuden_IdNumber,
+     viewloanstuden.`FullName` AS viewloanstuden_FullName,
+     viewloanstuden.`accessionnumber` AS viewloanstuden_accessionnumber,
+     viewloanstuden.`loandate` AS viewloanstuden_loandate,
+     viewloanstuden.`duedate` AS viewloanstuden_duedate,
+     viewloanstuden.`returneddate` AS viewloanstuden_returneddate
+FROM
+     `viewloanstuden` viewloanstuden]]>
+	</queryString>
+	<field name="viewloanstuden_ISBN" class="java.lang.Integer"/>
+	<field name="viewloanstuden_title" class="java.lang.String"/>
+	<field name="viewloanstuden_IdNumber" class="java.lang.String"/>
+	<field name="viewloanstuden_FullName" class="java.lang.String"/>
+	<field name="viewloanstuden_accessionnumber" class="java.lang.Integer"/>
+	<field name="viewloanstuden_loandate" class="java.sql.Date"/>
+	<field name="viewloanstuden_duedate" class="java.sql.Date"/>
+	<field name="viewloanstuden_returneddate" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="307" y="0" width="510" height="49" uuid="81ecde99-10a6-4b98-9be1-31d13a98cda3"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Student Who Loan Book]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="131" height="20" uuid="744d46d0-a73d-4f1d-9875-5b559e864b28"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[studen_IdNumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="2" width="135" height="20" uuid="42e49a76-e684-4158-a571-15a26671135f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[studen_FullName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="2" width="111" height="20" uuid="d7767ad0-ba44-45ca-b93e-c9f83d0f0819"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[studen_ISBN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="0" width="117" height="20" uuid="98cf3c77-f0e5-4978-a795-aff539e673dc"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[book_title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="541" y="0" width="119" height="20" uuid="ded346a3-2b7f-4ab1-8ba2-11aae2486342"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[item_accessionnumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="675" y="0" width="132" height="20" uuid="b6c3b479-f407-4610-a411-ea6d438c3c9c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[loandate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="817" y="0" width="130" height="20" uuid="564b0216-8762-476f-b7dc-2746af7c0519"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[duedate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="957" y="0" width="151" height="20" uuid="e95f0198-b668-4a40-aca8-4c6b524af595"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[returneddate]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="27" width="100" height="20" uuid="6990b0b2-510c-498d-b28d-6f7fdc2d2fbe"/>
+				<textFieldExpression><![CDATA[$F{viewloanstuden_IdNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="27" width="100" height="20" uuid="86401c4e-de73-409a-9e19-fa96a28b32fb"/>
+				<textFieldExpression><![CDATA[$F{viewloanstuden_FullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="287" y="29" width="100" height="20" uuid="57892c17-05f2-4679-9c2e-646e09be4d0b"/>
+				<textFieldExpression><![CDATA[$F{viewloanstuden_ISBN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="412" y="27" width="100" height="20" uuid="842c06df-787f-4922-bba6-40f547efa123"/>
+				<textFieldExpression><![CDATA[$F{viewloanstuden_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="541" y="29" width="100" height="20" uuid="7d9e7edc-8fc2-4d0c-b655-78e2b61b0598"/>
+				<textFieldExpression><![CDATA[$F{viewloanstuden_accessionnumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="675" y="29" width="100" height="20" uuid="e4b2d979-1099-41a8-8c7a-0a11829e44f9"/>
+				<textFieldExpression><![CDATA[$F{viewloanstuden_loandate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="817" y="47" width="100" height="20" uuid="87ef44ff-c3ab-4846-ba97-be4363dede48"/>
+				<textFieldExpression><![CDATA[$F{viewloanstuden_duedate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="957" y="47" width="100" height="20" uuid="a2a9a3fd-7362-495c-b1d4-adda1750cb56"/>
+				<textFieldExpression><![CDATA[$F{viewloanstuden_returneddate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1054" pageHeight="792" columnWidth="1014" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9a412f21-2499-458f-a9e5-c364f1362daf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     bokrep.`ISBN` AS bokrep_ISBN,
+     bokrep.`title` AS bokrep_title,
+     bokrep.`Authour` AS bokrep_Authour,
+     bokrep.`Edition` AS bokrep_Edition,
+     bokrep.`year` AS bokrep_year,
+     bokrep.`ItemISBN` AS bokrep_ItemISBN,
+     bokrep.`itemshelfcode` AS bokrep_itemshelfcode,
+     bokrep.`shelfcode` AS bokrep_shelfcode,
+     bokrep.`shelfname` AS bokrep_shelfname
+FROM
+     `bokrep` bokrep]]>
+	</queryString>
+	<field name="bokrep_ISBN" class="java.lang.Integer"/>
+	<field name="bokrep_title" class="java.lang.String"/>
+	<field name="bokrep_Authour" class="java.lang.String"/>
+	<field name="bokrep_Edition" class="java.lang.String"/>
+	<field name="bokrep_year" class="java.sql.Date"/>
+	<field name="bokrep_ItemISBN" class="java.lang.Integer"/>
+	<field name="bokrep_itemshelfcode" class="java.lang.Integer"/>
+	<field name="bokrep_shelfcode" class="java.lang.Integer"/>
+	<field name="bokrep_shelfname" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="205" y="15" width="224" height="47" uuid="21a58156-f362-4c77-9051-3735b54c102f"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Report Book List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="2" width="100" height="20" uuid="f040f51c-9eca-4361-85cb-83fee17e42f7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[bokrep_ISBN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="2" width="100" height="20" uuid="bc480839-4882-481a-aca5-00a830a53d07"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[bokrep_title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="273" y="2" width="100" height="20" uuid="40d56a98-595e-4930-a375-98720ce31ca0"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[bokrep_Authour]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="2" width="100" height="20" uuid="174bf9bd-4312-4222-a522-4213c8ee24da"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[bokrep_Edition]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="580" y="2" width="100" height="20" uuid="74f4cb13-ef07-4743-bbc1-773f710bc312"/>
+				<text><![CDATA[bokrep_shelfname]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="8" y="14" width="100" height="20" uuid="513763c6-8970-4677-bd4e-75418100491e"/>
+				<textFieldExpression><![CDATA[$F{bokrep_ISBN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="10" width="100" height="20" uuid="982e38c5-b1cc-4665-abc6-abde9084de62"/>
+				<textFieldExpression><![CDATA[$F{bokrep_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="14" width="100" height="20" uuid="899baad2-2dfb-485a-914b-95bc88136cef"/>
+				<textFieldExpression><![CDATA[$F{bokrep_Authour}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="14" width="100" height="20" uuid="d8b621f2-4e08-4888-967a-413a7aa449f6"/>
+				<textFieldExpression><![CDATA[$F{bokrep_Edition}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="580" y="10" width="100" height="20" uuid="a691b177-d776-476b-9b8c-c5487d6ba780"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bokrep_shelfname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
